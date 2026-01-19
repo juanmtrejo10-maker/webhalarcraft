@@ -3,9 +3,12 @@ const REDIRECT_URI = 'https://halarcraftweb.netlify.app/callback';
 
 // Login Discord
 function loginDiscord() {
-    const scope = 'identify';
-    const url = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${scope}`;
+    const CLIENT_ID = '1451262371971600477';
+    const REDIRECT_URI = 'https://halarcraftweb.netlify.app/callback';
+    const scope = 'identify email';  // ← agregamos email aquí
+    const url = `https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${scope}`;
     window.location.href = url;
+}
 }
 
 // Simulación de login (hasta que tengamos la function real)
