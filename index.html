@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HalarCraft Network - Servidor Minecraft Lunar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-layers">
+        <div class="layer layer-stars-far"></div>
+        <div class="layer layer-stars-near"></div>
+        <div class="meteor" style="--delay: 3;"></div>
+        <div class="meteor" style="--delay: 7;"></div>
+        <div class="meteor" style="--delay: 12;"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">🌕 HalarCraft Network</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servidor">Servidor</a></li>
+                <li><a href="#reglas">Reglas</a></li>
+                <li><a href="#codigos">Códigos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#discord">Discord</a></li>
+                <li><a href="#sanciones">Sanciones</a></li>
+            </ul>
+            <div id="user-profile" style="display:none; align-items:center; gap:10px;">
+                <img id="user-avatar" src="" alt="Avatar" width="32" style="border-radius:50%;">
+                <span id="user-name"></span>
+                <button onclick="logout()">Cerrar sesión</button>
+            </div>
+            <button id="login-btn" onclick="loginDiscord()">Login con Discord</button>
+        </nav>
+        <div class="moon-float"></div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Bienvenido a HalarCraft Network</h1>
+            <p>Explorá un mundo lunar survival con vibes cyber en Minecraft</p>
+            <p>IP: <span id="ip-display">Próximamente</span></p>
+            <button onclick="alert('Server en construcción. ¡Volve pronto!')">Conectate</button>
+        </section>
+
+        <section id="servidor">
+            <h2>Info del Servidor</h2>
+            <p>PaperMC 1.20.4 con Velocity + Geyser (Bedrock) + ViaVersion (1.15 → latest)</p>
+            <div id="server-status">🌙 Cargando estado...</div>
+            <div id="player-count">Jugadores online: Próximamente</div>
+        </section>
+
+        <section id="reglas">
+            <h2>Reglas</h2>
+            <ul>
+                <li>No griefing, cheating ni toxicidad</li>
+                <li>Respeto mutuo en chat y juego</li>
+                <li>Diviértete explorando la luna cyber</li>
+            </ul>
+        </section>
+
+        <section id="codigos" style="display:none;">
+            <h2>Códigos Secretos</h2>
+            <p>Encontrá códigos escondidos por el sitio. Solo visibles si estás logueado con Discord.</p>
+            <div id="claimed-codes">Códigos reclamados: Ninguno aún</div>
+            <!-- Botones invisibles - posiciones aproximadas, podés moverlas -->
+            <button class="easter-btn" data-code="lunarjuan" style="top:15%; left:25%;"></button>
+            <button class="easter-btn" data-code="halarmoon" style="top:45%; left:70%;"></button>
+            <button class="easter-btn" data-code="craft2026" style="top:65%; left:40%;"></button>
+            <button class="easter-btn" data-code="secretluna" style="top:80%; left:10%;"></button>
+            <button class="easter-btn" data-code="velocityvip" style="top:30%; left:85%;"></button>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="gallery-grid">
+                <img src="https://thumbs.dreamstime.com/b/moon-surface-seamless-texture-background-closeup-moon-surface-texture-188679621.jpg" alt="Luna cyber" onclick="openLightbox(this.src)">
+                <img src="https://images.stockcake.com/public/5/b/e/5be49546-6bb5-4c3b-963b-ec71ea21fc4d/neon-moon-rising-stockcake.jpg" alt="Neon moon" onclick="openLightbox(this.src)">
+                <!-- Agregá tus screenshots aquí cuando los tengas -->
+            </div>
+            <div id="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" src="">
+            </div>
+        </section>
+
+        <section id="discord">
+            <h2>Discord</h2>
+            <p>Únete para eventos, soporte y reclamos de códigos</p>
+            <a href="https://discord.gg/" class="discord-btn">Unirse (link pendiente)</a>
+        </section>
+
+        <section id="sanciones">
+            <h2>Sanciones</h2>
+            <h3>Bans Minecraft</h3>
+            <ul><li>Próximamente</li></ul>
+            <h3>Sanciones Discord</h3>
+            <ul><li>Próximamente</li></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 HalarCraft Network - Desde Dos de Mayo, Misiones, AR</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
