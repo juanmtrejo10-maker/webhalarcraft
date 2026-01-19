@@ -1,0 +1,9 @@
+[build]
+  command = ""  # vacío para HTML estático
+  publish = "."
+
+[[redirects]]
+  from = "/callback"
+  to = "/index.html"
+  status = 200
+  force = true
